@@ -154,7 +154,7 @@ export function RiyadhMap({ lang, label }: { lang: Lang; label: string }) {
         >
           {roads.map((r) => (
             <text
-              key={r.en}
+              key={`${r.en}-${r.x}-${r.y}`}
               x={r.x}
               y={r.y}
               transform={r.rotate ? `rotate(${r.rotate} ${r.x} ${r.y})` : undefined}
@@ -175,7 +175,7 @@ export function RiyadhMap({ lang, label }: { lang: Lang; label: string }) {
           strokeWidth="4"
         >
           {districts.map((d) => (
-            <text key={d.en} x={d.x} y={d.y}>
+            <text key={`${d.en}-${d.x}-${d.y}`} x={d.x} y={d.y}>
               {d[lang]}
             </text>
           ))}
