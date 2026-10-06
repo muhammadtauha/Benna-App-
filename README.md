@@ -1,4 +1,4 @@
-# Benna — Order Tracking Landing Page
+# Benna — App Landing Page
 
 Standalone, responsive landing page ("Track all your orders in one spot") for the Benna | بناء app.
 It is fully independent of the Benna frontend, backend, and mobile app.
