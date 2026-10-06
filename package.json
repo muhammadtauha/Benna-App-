@@ -1,0 +1,27 @@
+{
+  "name": "benna-tracking-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "description": "Standalone Benna order-tracking landing page (Next.js + Tailwind)",
+  "dependencies": {
+    "next": "^16.4.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20.16.11",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.6.3"
+  },
+  "private": true
+}
