@@ -28,7 +28,12 @@ export const viewport: Viewport = { themeColor: "#1d1b50" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" dir="ltr" className={`${inter.variable} ${arabic.variable}`}>
+    <html
+      lang="en"
+      dir="ltr"
+      className={`${inter.variable} ${arabic.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-dvh bg-neutral-50 font-sans text-neutral-900">{children}</body>
     </html>
   );
