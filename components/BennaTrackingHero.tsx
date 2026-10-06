@@ -39,10 +39,10 @@ export function BennaTrackingHero({ initialLang = "en" }: { initialLang?: Lang }
     <section
       dir={dir}
       lang={lang}
-      className="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl border border-neutral-100 bg-white shadow-xl"
+      className="mx-auto w-full max-w-[1920px] overflow-hidden rounded-3xl border border-neutral-100 bg-white shadow-xl"
     >
-      <div className="grid lg:grid-cols-2">
-        <div className="relative flex flex-col items-center px-6 pb-8 pt-14 text-center sm:px-10 lg:py-14">
+      <div className="grid lg:min-h-[calc(100dvh-2rem)] lg:grid-cols-2">
+        <div className="relative flex flex-col items-center px-6 pb-8 pt-14 text-center sm:px-10 lg:justify-center lg:py-16">
           <button
             type="button"
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
@@ -53,16 +53,17 @@ export function BennaTrackingHero({ initialLang = "en" }: { initialLang?: Lang }
             {t.toggle}
           </button>
 
-          <h1 className="max-w-md text-4xl font-extrabold tracking-tight text-balance text-neutral-900 sm:text-5xl sm:leading-[1.05]">
+          <h1 className="max-w-md text-4xl font-extrabold tracking-tight text-balance text-neutral-900 sm:text-5xl sm:leading-[1.05] lg:max-w-lg lg:text-6xl xl:max-w-xl xl:text-7xl">
             {t.headline}
           </h1>
-          <p className="mt-5 max-w-md text-base text-neutral-500 sm:text-lg">{t.subheadline}</p>
+          <p className="mt-5 max-w-md text-base text-neutral-500 sm:text-lg xl:mt-6 xl:text-xl">{t.subheadline}</p>
 
-          <div className="mt-8 flex w-full max-w-sm items-center gap-4 rounded-2xl border border-neutral-100 bg-white p-4 text-start shadow-sm">
+          <div className="mt-8 flex w-full max-w-sm items-center gap-4 rounded-2xl border border-neutral-100 bg-white p-4 text-start shadow-sm xl:mt-12 xl:max-w-md xl:gap-6 xl:rounded-3xl xl:p-6">
             <div className="shrink-0 rounded-xl border border-neutral-100 bg-white p-2 shadow-sm">
               <QRCodeSVG
                 value={QR_URL}
                 size={112}
+                className="size-28 xl:size-36"
                 level="H"
                 marginSize={0}
                 fgColor="#111827"
@@ -77,17 +78,17 @@ export function BennaTrackingHero({ initialLang = "en" }: { initialLang?: Lang }
                 }}
               />
             </div>
-            <p className="text-base font-semibold text-neutral-800 sm:text-lg">{t.scan}</p>
+            <p className="text-base font-semibold text-neutral-800 sm:text-lg xl:text-2xl">{t.scan}</p>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 xl:mt-12">
             <div className="flex items-center gap-3">
               <Image
                 src="/benna-app-icon.png"
                 alt={t.iconAlt}
                 width={48}
                 height={48}
-                className="size-12 rounded-xl shadow-sm ring-1 ring-black/5"
+                className="size-12 rounded-xl shadow-sm ring-1 ring-black/5 xl:size-14"
               />
               <div className="text-start">
                 <div className="flex items-center gap-1.5" role="img" aria-label={t.ratingAria(ratingValue)}>
@@ -117,7 +118,7 @@ export function BennaTrackingHero({ initialLang = "en" }: { initialLang?: Lang }
 
 function MapPanel({ t, lang }: { t: (typeof dictionary)[Lang]; lang: Lang }) {
   return (
-    <div className="relative h-80 overflow-hidden border-t border-neutral-100 sm:h-96 lg:h-auto lg:min-h-[560px] lg:border-t-0 lg:border-s">
+    <div className="relative h-80 overflow-hidden border-t border-neutral-100 sm:h-96 lg:h-auto lg:border-t-0 lg:border-s">
       <RiyadhMap lang={lang} label={t.mapAria} />
 
       <div className="absolute bottom-4 end-4 flex items-center gap-3 rounded-2xl sm:bottom-auto sm:end-auto sm:start-4 sm:top-4 bg-white/95 p-2.5 pe-4 shadow-lg ring-1 ring-black/5 backdrop-blur">
@@ -138,8 +139,8 @@ function MapPanel({ t, lang }: { t: (typeof dictionary)[Lang]; lang: Lang }) {
         <span className="absolute left-0 top-0 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3.5px] border-neutral-900 bg-white" />
         <div className="absolute bottom-2 left-0 -translate-x-1/2">
           <div className="flex animate-float flex-col items-center">
-            <div className="flex size-20 items-center justify-center rounded-2xl bg-white shadow-xl ring-1 ring-black/5 sm:size-24">
-              <ParcelIcon className="size-14 sm:size-16" />
+            <div className="flex size-20 items-center justify-center rounded-2xl bg-white shadow-xl ring-1 ring-black/5 sm:size-24 xl:size-28 xl:rounded-3xl">
+              <ParcelIcon className="size-14 sm:size-16 xl:size-20" />
             </div>
             <span className="h-7 w-0.5 rounded-full bg-neutral-900" />
           </div>

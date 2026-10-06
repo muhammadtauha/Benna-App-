@@ -9,7 +9,7 @@ export default async function Page({
   const { lang } = await searchParams;
 
   return (
-    <main className="flex min-h-dvh items-center px-4 py-8 sm:px-6 lg:py-16">
+    <main className="flex min-h-dvh items-stretch p-3 sm:p-4">
       <BennaTrackingHero initialLang={isLang(lang) ? lang : "en"} />
     </main>
   );

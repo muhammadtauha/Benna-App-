@@ -20,7 +20,7 @@ export function StoreBadges({ t }: { t: Dictionary }) {
           alt=""
           width={135}
           height={40}
-          className="h-10 w-auto sm:h-11"
+          className="h-10 w-auto sm:h-11 xl:h-12"
         />
       </a>
       <a
@@ -36,7 +36,7 @@ export function StoreBadges({ t }: { t: Dictionary }) {
           alt=""
           width={180}
           height={53}
-          className="h-10 w-auto sm:h-11"
+          className="h-10 w-auto sm:h-11 xl:h-12"
         />
       </a>
     </div>
